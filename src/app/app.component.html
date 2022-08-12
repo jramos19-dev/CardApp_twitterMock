@@ -1,15 +1,8 @@
-<app-card [title]="posts[0].title"
-[imgUrl] = "posts[0].imgUrl"
-[userName] ="posts[0].userName"
-[content] = "posts[0].content"
- ></app-card>
- <app-card [title]="posts[0].title"
-[imgUrl] = "posts[1].imgUrl"
-[userName] ="posts[1].userName"
-[content] = "posts[1].content"
- ></app-card>
- <app-card [title]="posts[0].title"
-[imgUrl] = "posts[2].imgUrl"
-[userName] ="posts[2].userName"
-[content] = "posts[2].content"
- ></app-card>
+<app-card *ngFor="let post of posts "
+[title]="post.title"
+[content]="post.content"
+[imgUrl]="post.imgUrl"
+[userName]="post.userName"
+>
+
+</app-card>
